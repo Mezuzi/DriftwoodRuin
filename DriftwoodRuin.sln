@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriftwoodRuin.CSharp.Plugins", "DriftwoodRuin.CSharp.Plugins.csproj", "{9C1B8474-07D8-E802-7DA6-92BA614E752E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriftwoodRuin.CSharp", "DriftwoodRuin.CSharp.csproj", "{A31345B9-17B7-550A-1108-D11CA90D3558}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C1B8474-07D8-E802-7DA6-92BA614E752E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1B8474-07D8-E802-7DA6-92BA614E752E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1B8474-07D8-E802-7DA6-92BA614E752E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1B8474-07D8-E802-7DA6-92BA614E752E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31345B9-17B7-550A-1108-D11CA90D3558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31345B9-17B7-550A-1108-D11CA90D3558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31345B9-17B7-550A-1108-D11CA90D3558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31345B9-17B7-550A-1108-D11CA90D3558}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
