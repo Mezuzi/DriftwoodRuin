@@ -3,6 +3,8 @@ using System.Collections;
 
 public class WaveBehaviour : MonoBehaviour {
 
+    // For visual effect only.
+
     public float yMinRg = -.1f;
     public float yMaxRg = .1f;
     public float yVarient = .005f;
