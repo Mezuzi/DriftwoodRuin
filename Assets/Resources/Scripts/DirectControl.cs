@@ -10,12 +10,12 @@ public class DirectControl : MonoBehaviour {
             rb = GetComponent<Rigidbody>();
 	}
 	
-    /*
 	void FixedUpdate () {
-        if (transform.position.z < 35) {
-            rb.AddForce(new Vector3(0f, 0f, 750f)); // * Input.GetAxis("Vertical") );
-                                                     // rb.AddForce(new Vector3(10000f, 0f, 0f) * Input.GetAxis("Horizontal"));
-        }
-    } */
+        if (Input.GetAxis("BoatForward") != 0)
+            rb.AddRelativeForce ( Vector3.forward * 5000f * Input.GetAxis("BoatForward") );
+        if (Input.GetAxis("BoatRotate") != 0)
+            rb.AddForceAtPosition (Vector3.right * Input.GetAxis("BoatRotate") * 10f, rb.centerOfMass);
+        
+    }
 
 }

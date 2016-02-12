@@ -6,7 +6,6 @@ public class PickupScript : MonoBehaviour {
     Camera cam;
     Collider tmpCollider;
 
-    MeshCollider water;
     public Rigidbody rb;
 
     bool isCarrying = false;
@@ -17,11 +16,10 @@ public class PickupScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         cam = GetComponentInChildren<Camera>();
-        water = GameObject.Find("Water").GetComponent<MeshCollider>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
 
         if ( !axisInUse && Input.GetAxis("Use") != 0) {
             axisInUse = true;
@@ -49,9 +47,7 @@ public class PickupScript : MonoBehaviour {
                 tmpCollider = null;
             }
         }
-
-        Row();
-
+        
     }
     void Pickup () {
         isCarrying = true;
@@ -67,17 +63,6 @@ public class PickupScript : MonoBehaviour {
         tmpCollider.gameObject.GetComponent<Renderer>().material.color = Color.white;
         tmpCollider.GetComponent<Rigidbody>().isKinematic = false;
         tmpCollider.gameObject.transform.SetParent(null);
-    }
-
-    void Row() {
-        if (Input.GetAxis("Row") != 0) {
-            RaycastHit hit;
-            if (water.Raycast(new Ray(cam.transform.position, cam.transform.forward), out hit, 10f)) {
-                Vector3 F = cam.transform.forward * -3000f;
-                F = new Vector3(F.x, 0f, F.z);
-                rb.AddForceAtPosition( F, hit.point);
-            }
-        }
     }
 
 }

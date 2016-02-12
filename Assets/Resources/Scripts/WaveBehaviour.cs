@@ -10,6 +10,8 @@ public class WaveBehaviour : MonoBehaviour {
     public float yVarient = .005f;
     Vector3[] startPoints;
 
+
+
     Mesh mesh = null;
 
 	void Start () {
